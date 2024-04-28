@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Check if dump file location is provided
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <dump_file>"
+    exit 1
+fi
+
+# Find the closest .env file in the directory tree
+dir="."
+while [[ "$dir" != "" && ! -e "$dir/.env" ]]; do
+    if [ "$dir" == "$HOME" ]; then
+        echo ".env file not found in the directory tree until the home directory"
+        exit 1
+    fi
+    dir=${dir%/*}
+done
+
+# Load variables from .env file
+source "$dir/.env"
+
+# Export database to SQL file
+mysqldump -h $SS_DATABASE_SERVER -u $SS_DATABASE_USERNAME -p$SS_DATABASE_PASSWORD $SS_DATABASE_NAME > $1
