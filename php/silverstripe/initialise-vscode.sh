@@ -8,6 +8,12 @@ PROJECT_FOLDER=${PROJECT_FOLDER:-~/project}
 PROJECT_NAME=${PROJECT_NAME:-project}
 PROJECT_NAME=$(echo $PROJECT_NAME | sed 's/[^a-zA-Z0-9]/_/g')
 
+# Download scripts from the scripts repository
+git clone https://github.com/PixNyb/dockerised-vscode-scripts /tmp/scripts
+sudo mv /tmp/scripts/php/silverstripe/scripts/* /usr/local/bin
+chmod +x /usr/local/bin/*
+rm -rf /tmp/scripts
+
 # Update package lists
 sudo add-apt-repository ppa:ondrej/php -y
 sudo apt-get update
