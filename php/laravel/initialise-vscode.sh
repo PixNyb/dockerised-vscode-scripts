@@ -94,9 +94,11 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 # Install Laravel using Composer
 composer global require laravel/installer -n
 
-# Install Node.js and npm
-curl -sL https://deb.nodesource.com/setup_${NODE_VERSION} | sudo -E bash -
-sudo apt-get install -y nodejs
+# Install Node.js and npm using nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+source ~/.bashrc
+nvm install $NODE_VERSION
+nvm use $NODE_VERSION
 
 # Install yarn
 npm install -g yarn
