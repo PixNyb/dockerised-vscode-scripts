@@ -99,14 +99,13 @@ sudo mv composer.phar /usr/local/bin/composer
 # Set the environment variables for composer
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
-# Convert the node version to the format required by the nodesource setup script.
-# A nodesource version just contains the major version number and an 'x' at the end.
+# Convert the node version to the format required by the nvm script
 NODE_VERSION=$(echo $NODE_VERSION | cut -d '.' -f 1)
 NODE_VERSION=$(echo $NODE_VERSION | sed 's/^v//')
 
 # Install Node.js and npm using nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-source ~/.bashrc
+. $NVM_DIR/nvm.sh
 nvm install $NODE_VERSION
 nvm use $NODE_VERSION
 
