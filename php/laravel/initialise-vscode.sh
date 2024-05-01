@@ -100,7 +100,7 @@ composer global require laravel/installer -n
 
 # Install Node.js and npm using nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-. $NVM_DIR/nvm.sh
+. ~/.nvm/nvm.sh
 nvm install $NODE_VERSION
 nvm use $NODE_VERSION
 
