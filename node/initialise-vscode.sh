@@ -58,4 +58,4 @@ if [ -f yarn.lock ]; then
 fi
 
 # Add an echo to the ~/.bashrc file to remind the user to run the Laravel server
-echo "echo -e 'You are currently running a \033[1;31mLaravel\033[0m specialisation container.'" >>~/.bashrc
+echo "echo -e 'You are currently running a \033[1;31mNode\033[0m generic container.'" >>~/.bashrc
