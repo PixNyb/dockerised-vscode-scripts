@@ -18,7 +18,6 @@ if [ -z $PHP_VERSION ]; then
 		# In order of priority, check for the PHP version in the composer.json file:
 		# 1. config.platform.php
 		# 2. require.php
-		# 3. check packagist for the required PHP version for `laravel/framework` if it's installed
 		PHP_VERSION=$(cat composer.json | jq -r '.config.platform.php // ""')
 
 		if [ -z $PHP_VERSION ]; then

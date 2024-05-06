@@ -31,7 +31,7 @@ If you do not specify the `PHP_VERSION` or `NODE_VERSION` environment variables,
 
 ## Included Tools
 
-The following tools are included in the Laravel setup script:
+The following tools are included in the setup script:
 
 - [PHP](https://www.php.net/)
   - [Composer](https://getcomposer.org/)
@@ -48,7 +48,7 @@ The following tools are included in the Laravel setup script:
 
 ## Included Aliases
 
-The following aliases are included in the Laravel setup script:
+The following aliases are included in the setup script:
 
 - `serve`: Run the Laravel development server
 - `migrate`: Run the Laravel database migrations
@@ -60,7 +60,7 @@ The following aliases are included in the Laravel setup script:
 
 ## Included Scripts
 
-The following scripts are included in the Laravel setup script:
+The following scripts are included in the setup script:
 
 - `import-db`: Import a database dump into the database
   - Usage: `import-db /path/to/dump.sql`

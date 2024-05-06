@@ -21,10 +21,9 @@ If you do not specify the `PHP_VERSION` environment variable, the setup script w
 
 ## Included Tools
 
-The following tools are included in the Laravel setup script:
+The following tools are included in the setup script:
 
 - [PHP](https://www.php.net/)
   - [Composer](https://getcomposer.org/)
-    - [Laravel Installer](https://laravel.com/docs/8.x/installation)
   - [Required PHP Extensions](https://laravel.com/docs/8.x/deployment#server-requirements)
   - [xDebug](https://xdebug.org/)

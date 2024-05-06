@@ -1,12 +1,12 @@
-# Node.js
+# .NET
 
-This directory contains the setup script and tools for the Node.js toolkit in order to get started quickly with a customised development environment for generic Node.js projects.
+This directory contains the setup script and tools for the .NET toolkit in order to get started quickly with a customised development environment for generic .NET projects and solutions.
 
 ## Additional Environment Variables
 
 The following environment variables can be used to customise the Laravel setup script:
 
-- `NODE_VERSION`: The version of Node.js to install.
+- `DOTNET_VERSION`: The version of .NET to install.
 
 ### Autodetecting Node.js Version
 
@@ -24,8 +24,8 @@ If you do not specify the `NODE_VERSION` environment variable, the setup script 
 
 ## Included Tools
 
-The following tools are included in the setup script:
+The following tools are included in the Laravel setup script:
 
-- [Node.js](https://nodejs.org/)
-  - [NPM](https://www.npmjs.com/)
-  - [Yarn](https://yarnpkg.com/)
+- [.NET](https://dotnet.microsoft.com/)
+  - [NuGet](https://www.nuget.org/)
+  - [MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild)

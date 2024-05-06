@@ -14,6 +14,7 @@ The following environment variables can be used to customise the Laravel setup s
 If you do not specify the `PHP_VERSION` or `NODE_VERSION` environment variables, the setup script will attempt to autodetect the latest versions of PHP and Node.js to install. It does this by checking the following sources:
 
 - [composer.json](https://getcomposer.org/doc/01-basic-usage.md#composer-json-project-setup)
+
   1. `config.platform.php`
   2. `require.php`
   3. `silverstripe/recipe-cms`
@@ -33,7 +34,7 @@ If you do not specify the `PHP_VERSION` or `NODE_VERSION` environment variables,
 
 ## Included Tools
 
-The following tools are included in the Silverstripe setup script:
+The following tools are included in the setup script:
 
 - [PHP](https://www.php.net/)
   - [Composer](https://getcomposer.org/)
@@ -46,7 +47,7 @@ The following tools are included in the Silverstripe setup script:
 
 ## Included Aliases
 
-The following aliases are included in the Silverstripe setup script:
+The following aliases are included in the setup script:
 
 - `dev-build`: Run the Silverstripe dev/build command
 - `flush`: Clear the Silverstripe cache
@@ -57,7 +58,7 @@ The following aliases are included in the Silverstripe setup script:
 
 ## Included Scripts
 
-The following scripts are included in the Silverstripe setup script:
+The following scripts are included in the setup script:
 
 - `import-db`: Import a database dump into the database
   - Usage: `import-db /path/to/dump.sql`
@@ -65,3 +66,5 @@ The following scripts are included in the Silverstripe setup script:
   - Usage: `export-db /path/to/dump.sql`
 - `clear-db`: Remove all tables from the database
   - Usage: `clear-db`
+
+

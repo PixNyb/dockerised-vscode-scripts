@@ -162,7 +162,6 @@ echo "alias build='npm run build'" >>~/.bashrc
 echo "alias artisan='php artisan'" >>~/.bashrc
 echo "alias tinker='php artisan tinker'" >>~/.bashrc
 
-# Add an echo to the ~/.bashrc file to remind the user to run the Laravel server
 echo "echo -e 'You are currently running a \033[1;31mLaravel\033[0m specialisation container.'" >>~/.bashrc
 echo "echo -e 'Useful commands:'" >>~/.bashrc
 echo "echo -e '  - \033[1;34mserve\033[0m: Run the Laravel development server'" >>~/.bashrc

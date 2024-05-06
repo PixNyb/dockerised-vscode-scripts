@@ -15,7 +15,7 @@ services:
   code:
     image: pixnyb/code
     volumes:
-        - /path/to/initialise-vscode.sh:/usr/local/bin/initialise-vscode.sh
+      - /path/to/initialise-vscode.sh:/usr/local/bin/initialise-vscode.sh
 ```
 
 ### Using the Environment Variable
@@ -27,7 +27,7 @@ services:
   code:
     image: pixnyb/code
     environment:
-        - INIT_SCRIPT_URL=https://example.com/init.sh
+      - INIT_SCRIPT_URL=https://example.com/init.sh
 ```
 
 ## Example
@@ -39,10 +39,10 @@ services:
   code:
     image: pixnyb/code
     environment:
-        - VSCODE_KEYRING_PASS=password
-        - GH_TOKEN=<...>
-        - REPO_URL=<...>
-        - INIT_SCRIPT_URL=https://raw.githubusercontent.com/PixNyb/dockerised-vscode-scripts/main/php/laravel/initialise-vscode.sh
+      - VSCODE_KEYRING_PASS=password
+      - GH_TOKEN=<...>
+      - REPO_URL=<...>
+      - INIT_SCRIPT_URL=https://raw.githubusercontent.com/PixNyb/dockerised-vscode-scripts/main/php/laravel/initialise-vscode.sh
 ```
 
 ## Supported Languages and Toolkits
@@ -50,6 +50,8 @@ services:
 - [PHP](php)
   - [Laravel](php/laravel)
   - [Silverstripe](php/silverstripe)
+- [Node.js](node)
+- [.NET](dotnet)
 
 ## Contributing
 

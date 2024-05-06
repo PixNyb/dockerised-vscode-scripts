@@ -44,7 +44,7 @@ nvm use $NODE_VERSION
 # Install yarn
 npm install -g yarn
 
-# Set up the Laravel project
+# Set up the Node.js project
 cd $PROJECT_FOLDER
 
 # If the project contains a package-lock.json file, install the dependencies
@@ -57,5 +57,4 @@ if [ -f yarn.lock ]; then
 	yarn install &
 fi
 
-# Add an echo to the ~/.bashrc file to remind the user to run the Laravel server
-echo "echo -e 'You are currently running a \033[1;31mNode\033[0m generic container.'" >>~/.bashrc
+echo "echo -e 'You are currently running a \033[1;31mNode.js\033[0m generic container.'" >>~/.bashrc
