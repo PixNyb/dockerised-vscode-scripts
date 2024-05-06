@@ -63,3 +63,5 @@ The following scripts are included in the Silverstripe setup script:
   - Usage: `import-db /path/to/dump.sql`
 - `export-db`: Export the database into a dump file
   - Usage: `export-db /path/to/dump.sql`
+- `clear-db`: Remove all tables from the database
+  - Usage: `clear-db`

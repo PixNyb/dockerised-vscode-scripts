@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Check if SQL file is provided
+if [ $# -ne 1 ]; then
+	echo "Usage: $0 <sql_file>"
+	exit 1
+fi
+
+# Find the closest .env file in the directory tree
+dir="."
+while [[ $dir != "" && ! -e "$dir/.env" ]]; do
+	if [ "$dir" == "$HOME" ]; then
+		echo ".env file not found in the directory tree until the home directory"
+		exit 1
+	fi
+	dir=${dir%/*}
+done
+
+# Load variables from .env file
+source "$dir/.env"
+
+# Recreate database
+mysql -h $SS_DATABASE_SERVER -u $SS_DATABASE_USERNAME -p$SS_DATABASE_PASSWORD -e "DROP DATABASE $SS_DATABASE_NAME;"
+mysql -h $SS_DATABASE_SERVER -u $SS_DATABASE_USERNAME -p$SS_DATABASE_PASSWORD -e "CREATE DATABASE $SS_DATABASE_NAME;"
