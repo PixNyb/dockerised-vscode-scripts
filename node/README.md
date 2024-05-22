@@ -4,7 +4,7 @@ This directory contains the setup script and tools for the Node.js toolkit in or
 
 ## Additional Environment Variables
 
-The following environment variables can be used to customise the Laravel setup script:
+The following environment variables can be used to customise the Node.js setup script:
 
 - `NODE_VERSION`: The version of Node.js to install.
 

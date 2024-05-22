@@ -17,6 +17,10 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 sudo apt-get update
 sudo apt-get install -y apache2
 
+# Download Ruby, RubyGems, GCC, Make, and other dependencies
+sudo apt-get install -y ruby-full build-essential zlib1g-dev \
+	liblzma-dev libsqlite3-dev
+
 # Point apache to $PUBLIC_FOLDER
 chmod 755 ~
 sudo sed -i "s|/var/www/html|$PUBLIC_FOLDER|g" /etc/apache2/sites-available/000-default.conf
@@ -38,4 +42,4 @@ sudo service apache2 start
 # Set up the HTML project
 cd $PROJECT_FOLDER
 
-echo "echo -e 'You are currently running a \033[1;36mHTML\033[0m generic container.'" >>~/.bashrc
+echo "echo -e 'You are currently running a \033[1;36mJekyll\033[0m generic container.'" >>~/.bashrc
