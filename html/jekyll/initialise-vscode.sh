@@ -8,6 +8,7 @@ PROJECT_NAME=$(echo $PROJECT_NAME | sed 's/[^a-zA-Z0-9]/_/g')
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Download Ruby, RubyGems, GCC, Make, and other dependencies
+sudo apt update
 sudo apt-get install -y ruby-full build-essential zlib1g-dev \
 	liblzma-dev libsqlite3-dev
 
