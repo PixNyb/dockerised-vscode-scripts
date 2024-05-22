@@ -11,6 +11,7 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 sudo apt update
 sudo apt-get install -y ruby-full build-essential zlib1g-dev \
 	liblzma-dev libsqlite3-dev
+sudo gem install jekyll bundler
 
 # Set up the HTML project
 cd $PROJECT_FOLDER
