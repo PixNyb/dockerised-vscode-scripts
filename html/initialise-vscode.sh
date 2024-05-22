@@ -8,6 +8,7 @@ PROJECT_NAME=$(echo $PROJECT_NAME | sed 's/[^a-zA-Z0-9]/_/g')
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Install apache2 and enable it
+sudo apt-get update
 sudo apt-get install -y apache2
 
 # Point apache to $PROJECT_FOLDER
