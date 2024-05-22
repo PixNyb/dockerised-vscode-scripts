@@ -4,7 +4,7 @@ This directory contains the setup script and tools for the .NET toolkit in order
 
 ## Additional Environment Variables
 
-The following environment variables can be used to customise the Laravel setup script:
+The following environment variables can be used to customise the .NET setup script:
 
 - `DOTNET_VERSION`: The version of .NET to install.
 
@@ -24,7 +24,7 @@ If you do not specify the `NODE_VERSION` environment variable, the setup script 
 
 ## Included Tools
 
-The following tools are included in the Laravel setup script:
+The following tools are included in the .NET setup script:
 
 - [.NET](https://dotnet.microsoft.com/)
   - [NuGet](https://www.nuget.org/)

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Set the Node.js version
+# Set the dotnet version
 DOTNET_VERSION=${DOTNET_VERSION-}
 PROJECT_FOLDER=${PROJECT_FOLDER:-~/project}
 PROJECT_NAME=${PROJECT_NAME:-project}
@@ -48,5 +48,7 @@ elif [[ -f *.sln ]]; then
 fi
 
 echo "echo -e 'You are currently running a \033[1;31m.NET\033[0m generic container.'" >>~/.bashrc
+
+
 
 
