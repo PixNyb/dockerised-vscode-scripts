@@ -7,11 +7,25 @@ PROJECT_NAME=$(echo $PROJECT_NAME | sed 's/[^a-zA-Z0-9]/_/g')
 # Set the environment variables for composer
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
-# Download Ruby, RubyGems, GCC, Make, and other dependencies
+# Update system packages
 sudo apt update
-sudo apt-get install -y ruby-full build-essential zlib1g-dev \
-	liblzma-dev libsqlite3-dev
-sudo gem install jekyll bundler
+
+# Install dependencies for rbenv and Ruby
+sudo apt-get install -y git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
+
+# Install rbenv and ruby-build plugin
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >>~/.bashrc
+echo 'eval "$(rbenv init -)"' >>~/.bashrc
+source ~/.bashrc
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+# Install Ruby
+rbenv install 2.7.2
+rbenv global 2.7.2
+
+# Install bundler
+gem install jekyll bundler
 
 # Set up the HTML project
 cd $PROJECT_FOLDER
