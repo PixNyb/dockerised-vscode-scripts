@@ -15,10 +15,15 @@ sudo apt-get install -y git curl libssl-dev libreadline-dev zlib1g-dev autoconf 
 
 # Install rbenv and ruby-build plugin
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >>~/.bashrc
-echo 'eval "$(rbenv init -)"' >>~/.bashrc
-source ~/.bashrc
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+# Add rbenv to bash so that it loads every time you open a Terminal
+echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >>~/.bashrc
+source ~/.bashrc
+
+# Ensure rbenv is correctly initialized
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # Install Ruby
 rbenv install 2.7.2
