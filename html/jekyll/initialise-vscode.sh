@@ -28,9 +28,11 @@ source ~/.bashrc
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+RUBY_VERSION=$(rbenv install -l | grep -v - | tail -1)
+
 # Install Ruby
-rbenv install 2.7.2
-rbenv global 2.7.2
+rbenv install $RUBY_VERSION
+rbenv global $RUBY_VERSION
 
 # Install bundler
 gem install jekyll bundler
