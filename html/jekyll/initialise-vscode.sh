@@ -18,7 +18,10 @@ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 # Add rbenv to bash so that it loads every time you open a Terminal
-echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >>~/.bashrc
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >>~/.bashrc
+echo 'eval "$(rbenv init -)"' >>~/.bashrc
+
+# Reload the shell to apply rbenv to the current session
 source ~/.bashrc
 
 # Ensure rbenv is correctly initialized
@@ -38,7 +41,7 @@ cd $PROJECT_FOLDER
 # If possible, run the Jekyll server
 if [[ -f "_config.yml" ]]; then
 	bundle install
-	bundle exec jekyll serve --host
+	bundle exec jekyll serve --host 0.0.0.0
 fi
 
 echo "echo -e 'You are currently running a \033[1;36mJekyll\033[0m generic container.'" >>~/.bashrc
