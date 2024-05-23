@@ -43,7 +43,7 @@ cd $PROJECT_FOLDER
 # If possible, run the Jekyll server
 if [[ -f "_config.yml" ]]; then
 	bundle install
-	bundle exec jekyll serve --host 0.0.0.0
+	bundle exec jekyll serve --host 0.0.0.0 &
 fi
 
 echo "echo -e 'You are currently running a \033[1;36mJekyll\033[0m generic container.'" >>~/.bashrc
