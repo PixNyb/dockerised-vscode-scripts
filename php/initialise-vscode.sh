@@ -2,6 +2,10 @@
 
 # Add extension to the list of extensions
 extensions=(
+	"bmewburn.vscode-intelephense-client"
+	"porifa.laravel-intelephense"
+	"xdebug.php-debug"
+	"devsense.profiler-php-vscode"
 )
 
 IFS=','

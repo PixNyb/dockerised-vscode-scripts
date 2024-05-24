@@ -2,6 +2,9 @@
 
 # Add extension to the list of extensions
 extensions=(
+	"christian-kohler.path-intellisense"
+	"formulahendry.auto-close-tag"
+	"formulahendry.auto-rename-tag"
 )
 
 IFS=','

@@ -52,6 +52,9 @@ services:
   - [Silverstripe](php/silverstripe)
 - [Node.js](node)
 - [.NET](dotnet)
+- [HTML](html)
+  - [Jekyll](html/jekyll)
+- [.NET](dotnet)
 
 ## Contributing
 

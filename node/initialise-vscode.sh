@@ -2,6 +2,12 @@
 
 # Add extension to the list of extensions
 extensions=(
+	"christian-kohler.npm-intellisense"
+	"christian-kohler.path-intellisense"
+	"dbaeumer.vscode-eslint"
+	"esbenp.prettier-vscode"
+	"formulahendry.auto-close-tag"
+	"formulahendry.auto-rename-tag"
 )
 
 IFS=','
