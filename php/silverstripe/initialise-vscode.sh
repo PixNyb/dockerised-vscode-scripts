@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Add extension to the list of extensions
+extensions=(
+)
+
+IFS=','
+EXTENSION_LIST=${extensions[*]} /usr/local/bin/install-extensions.sh
+unset IFS
+
 # Set PHP and Node.js versions
 PHP_VERSION=${PHP_VERSION:-}
 NODE_VERSION=${NODE_VERSION:-}

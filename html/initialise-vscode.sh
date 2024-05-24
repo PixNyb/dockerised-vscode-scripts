@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Add extension to the list of extensions
+extensions=(
+)
+
+IFS=','
+EXTENSION_LIST=${extensions[*]} /usr/local/bin/install-extensions.sh
+unset IFS
+
 PUBLIC_FOLDER=${PUBLIC_FOLDER-}
 PROJECT_FOLDER=${PROJECT_FOLDER:-~/project}
 PROJECT_NAME=${PROJECT_NAME:-project}

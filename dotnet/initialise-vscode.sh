@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# Add extension to the list of extensions
+extensions=(
+	"ms-dotnettools.csdevkit"
+	"ms-dotnettools.csharp"
+	"ms-dotnettools.dotnet-interactive-vscode"
+	"ms-dotnettools.vscode-dotnet-runtime"
+	"ionide.ionide-fsharp"
+)
+
+IFS=','
+EXTENSION_LIST=${extensions[*]} /usr/local/bin/install-extensions.sh
+unset IFS
+
 # Set the dotnet version
 DOTNET_VERSION=${DOTNET_VERSION:-dotnet-sdk-8.0}
 PROJECT_FOLDER=${PROJECT_FOLDER:-~/project}

@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Add extension to the list of extensions
+extensions=(
+)
+
+IFS=','
+EXTENSION_LIST=${extensions[*]} /usr/local/bin/install-extensions.sh
+unset IFS
+
 # Set the PHP version
 PHP_VERSION=${PHP_VERSION-}
 PROJECT_FOLDER=${PROJECT_FOLDER:-~/project}
