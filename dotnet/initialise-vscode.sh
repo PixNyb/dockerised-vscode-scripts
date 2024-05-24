@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the dotnet version
-DOTNET_VERSION=${DOTNET_VERSION-}
+DOTNET_VERSION=${DOTNET_VERSION:-dotnet-sdk-8.0}
 PROJECT_FOLDER=${PROJECT_FOLDER:-~/project}
 PROJECT_NAME=${PROJECT_NAME:-project}
 PROJECT_NAME=$(echo $PROJECT_NAME | sed 's/[^a-zA-Z0-9]/_/g')
