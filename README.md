@@ -54,7 +54,7 @@ services:
 - [.NET](dotnet)
 - [HTML](html)
   - [Jekyll](html/jekyll)
-- [.NET](dotnet)
+- [TEX](tex)
 
 ## Contributing
 

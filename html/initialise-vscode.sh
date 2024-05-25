@@ -21,9 +21,6 @@ if [ -z "$PUBLIC_FOLDER" ]; then
 	PUBLIC_FOLDER=$PROJECT_FOLDER
 fi
 
-# Set the environment variables for composer
-export PATH="$HOME/.composer/vendor/bin:$PATH"
-
 # Install apache2 and enable it
 sudo apt-get update
 sudo apt-get install -y apache2

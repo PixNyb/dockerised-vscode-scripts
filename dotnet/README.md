@@ -10,7 +10,7 @@ The following environment variables can be used to customise the .NET setup scri
 
 ## Included Tools
 
-The following tools are included in the .NET setup script:
+The following tools are included in the setup script:
 
 - [.NET](https://dotnet.microsoft.com/)
   - [NuGet](https://www.nuget.org/)
