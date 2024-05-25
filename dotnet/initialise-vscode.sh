@@ -53,12 +53,24 @@ sudo apt install -y $DOTNET_VERSION
 # Set up the .NET project
 cd $PROJECT_FOLDER
 
-# If there is a project or solution file, use it
-if [[ -f *.csproj ]]; then
-	dotnet restore
-elif [[ -f *.sln ]]; then
-	dotnet restore
-fi
+# If there are any project or solution files, use them
+for file in *.csproj; do
+	if [[ -f $file ]]; then
+		dotnet restore $file
+	fi
+done
+
+for file in *.fsproj; do
+	if [[ -f $file ]]; then
+		dotnet restore $file
+	fi
+done
+
+for file in *.sln; do
+	if [[ -f $file ]]; then
+		dotnet restore $file
+	fi
+done
 
 echo "echo -e 'You are currently running a \033[1;31m.NET\033[0m generic container.'" >>~/.bashrc
 
