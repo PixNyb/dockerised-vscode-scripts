@@ -7,6 +7,7 @@ extensions=(
 	"xdebug.php-debug"
 	"devsense.profiler-php-vscode"
 	"shufo.vscode-blade-formatter"
+	"onecentlin.laravel-blade"
 )
 
 IFS=','
