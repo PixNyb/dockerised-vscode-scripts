@@ -167,7 +167,7 @@ php artisan key:generate
 php artisan link:storage
 
 # Make some aliases for the user
-echo "alias serve='php artisan serve --host=0.0.0.0'" >>~/.bashrc
+echo "alias serve='php artisan serve --host=0.0.0.0 --port=8080'" >>~/.bashrc
 echo "alias migrate='php artisan migrate'" >>~/.bashrc
 echo "alias seed='php artisan db:seed'" >>~/.bashrc
 echo "alias watch='npm run dev'" >>~/.bashrc
@@ -191,5 +191,3 @@ echo "echo -e '  - \033[1;34mexport-db\033[0m: Export the database into a dump f
 echo "echo -e '    - \033[1;90mUsage\033[0m: export-db <dump_file>'" >>~/.bashrc
 echo "echo -e '  - \033[1;34mclear-db\033[0m: Remove all tables from the database'" >>~/.bashrc
 echo "echo -e '    - \033[1;90mUsage\033[0m: clear-db <dump_file>'" >>~/.bashrc
-
-
