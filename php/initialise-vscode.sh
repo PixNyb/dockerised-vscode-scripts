@@ -6,6 +6,7 @@ extensions=(
 	"porifa.laravel-intelephense"
 	"xdebug.php-debug"
 	"devsense.profiler-php-vscode"
+	"devsense.composer-php-vscode"
 )
 
 IFS=','
